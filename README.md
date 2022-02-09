@@ -17,6 +17,11 @@ Slider with the native scroll.
 | create | function | Activate the slider |
 | destroy | function | Desactivate the slider |
 
+## Options
+| Class  | Description |
+| ------ | ------ |
+| full | To have full width slider |
+
 
 ### Slider in container
 ```html
@@ -29,7 +34,6 @@ Slider with the native scroll.
         <li class="item"><a href="">5</a></li>
         <li class="item"><a href="">6</a></li>
         <li class="item"><a href="">7</a></li>
-        <li class="item"><a href="">8</a></li>
     </ul>
     <button class="slider-btn prev" aria-hidden="true" tabindex="-1">prev</button>
     <button class="slider-btn next" aria-hidden="true" tabindex="-1">next</button>
@@ -44,16 +48,9 @@ Slider with the native scroll.
         <li class="item"><a href="">2</a></li>
         <li class="item"><a href="">3</a></li>
         <li class="item"><a href="">4</a></li>
-        <li class="item"><a href="">5</a></li>
-        <li class="item"><a href="">6</a></li>
-        <li class="item"><a href="">7</a></li>
-        <li class="item"><a href="">8</a></li>
     </ul>
-    <button class="slider-btn prev" aria-hidden="true" tabindex="-1">prev</button>
-    <button class="slider-btn next" aria-hidden="true" tabindex="-1">next</button>
 </div>
 ```
-
 
 #### javascript
 ```javascript
@@ -70,8 +67,6 @@ myscroll.enable();
     }
 }
 ```
-
-
 
 ## Demo
 [See codepen demo](https://codepen.io/natjo/pen/eYGWwEo)
