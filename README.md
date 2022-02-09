@@ -22,8 +22,10 @@ Slider with the native scroll.
 | ------ | ------ |
 | full | To have full width slider |
 
+## Usage
 
-### Slider in container
+### Html
+#### Slider in container
 ```html
 <div class="slider myslider">
     <ul class="slider-content">
@@ -40,7 +42,8 @@ Slider with the native scroll.
 </div>
 ```
 
-### Slider full width
+### Html
+#### Slider full width and ithout controls
 ```html
 <div class="slider myslider">
     <ul class="slider-content full">
@@ -52,14 +55,14 @@ Slider with the native scroll.
 </div>
 ```
 
-#### javascript
+### javascript
 ```javascript
 const slider = document.querySelector('.myslider');
 const myscroll = new scroller(slider);
 myscroll.enable();
 ```
 
-#### css
+### css
 ```css
 .myslider{
     @media (min-width: 768px){
