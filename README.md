@@ -17,8 +17,8 @@ Slider with the native scroll.
 | create | function | Activate the slider |
 | destroy | function | Desactivate the slider |
 
+
 ### Slider in container
-#### html
 ```html
 <div class="slider myslider">
     <ul class="slider-content">
@@ -36,24 +36,7 @@ Slider with the native scroll.
 </div>
 ```
 
-#### javascript
-```javascript
-const slider = document.querySelector('.myslider');
-const myscroll = new scroller(slider);
-myscroll.enable();
-```
-
-#### css
-```css
-.myslider{
-    @media (min-width: 768px){
-        --nb: 4;
-    }
-}
-```
-
 ### Slider full width
-#### html
 ```html
 <div class="slider myslider">
     <ul class="slider-content full">
@@ -70,6 +53,24 @@ myscroll.enable();
     <button class="slider-btn next" aria-hidden="true" tabindex="-1">next</button>
 </div>
 ```
+
+
+#### javascript
+```javascript
+const slider = document.querySelector('.myslider');
+const myscroll = new scroller(slider);
+myscroll.enable();
+```
+
+#### css
+```css
+.myslider{
+    @media (min-width: 768px){
+        --nb: 4;
+    }
+}
+```
+
 
 
 ## Demo
