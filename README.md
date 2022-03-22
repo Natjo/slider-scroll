@@ -58,8 +58,8 @@ Slider with the native scroll.
 ### javascript
 ```javascript
 const slider = document.querySelector('.myslider');
-const myscroll = new scroller(slider);
-myscroll.enable();
+const myslider = new Slider(slider);
+myslider.enable();
 ```
 
 ### css
