@@ -3,8 +3,8 @@
 
 ![version](https://img.shields.io/github/manifest-json/v/Natjo/slider-scroll)
 
-Slider with the native scroll.
-! not supported in safari (behavior: 'smooth')
+Slider with the native scroll.<br>
+! polyfile if (behavior: 'smooth') not supported 
 
 ## Parameters
 | Parameter | Type | Description |
