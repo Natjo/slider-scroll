@@ -45,10 +45,10 @@ Slider with the native scroll.
 #### css
 ```css
 .slider{
-	@media (min-width: 600px){
-		--col: 12;
-		--nb: 4;
-	}
+    @media (min-width: 600px){
+        --col: 12;
+        --nb: 4;
+    }
 }
 ```
 
@@ -67,23 +67,49 @@ Slider with the native scroll.
 #### css
 ```css
 .slider{
-    grid-template-columns: var(--offset) auto var(--offset);
-	
-	.slider-content{
-		  grid-column: 1/-1;
+    @media (max-width: 599px){
+    --nb: 2;
+    }
+    @media (min-width: 600px){
+    --col: 12;
+    --nb: 4;
+    }
+}
+```
 
-	}
-	.slider-btn{
-		  grid-column: 2;
-	}
-	
-	@media (max-width: 599px){
-		--nb: 2;
-	}
-	@media (min-width: 600px){
-		--col: 12;
-		--nb: 4;
-	}
+### Slider full width and controls
+#### html
+```html
+<div class="slider myslider">
+    <ul class="slider-content full" aria-label="Last news">
+        <li class="item"><a href="">1</a></li>
+        <li class="item"><a href="">2</a></li>
+        <li class="item"><a href="">3</a></li>
+        <li class="item"><a href="">4</a></li>
+    </ul>
+    <button class="slider-btn prev" aria-hidden="true" tabindex="-1">prev</button>
+    <button class="slider-btn next" aria-hidden="true" tabindex="-1">next</button>
+</div>
+```
+#### css
+```css
+.slider{
+    grid-template-columns: var(--offset) auto var(--offset);
+
+    .slider-content{
+        grid-column: 1/-1;
+    }
+    .slider-btn{
+        grid-column: 2;
+    }
+
+    @media (max-width: 599px){
+        --nb: 2;
+    }
+    @media (min-width: 600px){
+        --col: 12;
+        --nb: 4;
+    }
 }
 ```
 
