@@ -24,11 +24,12 @@ Slider with the native scroll.
 
 ## Usage
 
-### Html
-#### Slider in container
+
+### Slider in container
+#### html
 ```html
 <div class="slider myslider">
-    <ul class="slider-content">
+    <ul class="slider-content" aria-label="Last news">
         <li class="item"><a href="">1</a></li>
         <li class="item"><a href="">2</a></li>
         <li class="item"><a href="">3</a></li>
@@ -41,18 +42,49 @@ Slider with the native scroll.
     <button class="slider-btn next" aria-hidden="true" tabindex="-1">next</button>
 </div>
 ```
+#### css
+```css
+.slider{
+	@media (min-width: 600px){
+		--col: 12;
+		--nb: 4;
+	}
+}
+```
 
-### Html
-#### Slider full width and ithout controls
+### Slider full width and without controls
+#### html
 ```html
 <div class="slider myslider">
-    <ul class="slider-content full">
+    <ul class="slider-content full" aria-label="Last news">
         <li class="item"><a href="">1</a></li>
         <li class="item"><a href="">2</a></li>
         <li class="item"><a href="">3</a></li>
         <li class="item"><a href="">4</a></li>
     </ul>
 </div>
+```
+#### css
+```css
+.slider{
+    grid-template-columns: var(--offset) auto var(--offset);
+	
+	.slider-content{
+		  grid-column: 1/-1;
+
+	}
+	.slider-btn{
+		  grid-column: 2;
+	}
+	
+	@media (max-width: 599px){
+		--nb: 2;
+	}
+	@media (min-width: 600px){
+		--col: 12;
+		--nb: 4;
+	}
+}
 ```
 
 ### javascript
@@ -62,14 +94,7 @@ const myslider = new Slider(slider);
 myslider.enable();
 ```
 
-### css
-```css
-.myslider{
-    @media (min-width: 768px){
-        --nb: 4;
-    }
-}
-```
+
 
 ## Demo
-[See codepen demo](https://codepen.io/natjo/pen/eYGWwEo)
+<a href="https://codepen.io/natjo/pen/eYGWwEo" target="_blank">See codepen demo</a>
