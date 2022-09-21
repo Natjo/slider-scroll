@@ -28,7 +28,7 @@ Slider with the native scroll.
 ### Slider in container
 #### html
 ```html
-<div class="slider myslider">
+<div class="slider container">
     <ul class="slider-content" aria-label="Last news">
         <li class="item"><a href="">1</a></li>
         <li class="item"><a href="">2</a></li>
@@ -55,8 +55,8 @@ Slider with the native scroll.
 ### Slider full width and without controls
 #### html
 ```html
-<div class="slider myslider">
-    <ul class="slider-content full" aria-label="Last news">
+<div class="slider full">
+    <ul class="slider-content" aria-label="Last news">
         <li class="item"><a href="">1</a></li>
         <li class="item"><a href="">2</a></li>
         <li class="item"><a href="">3</a></li>
@@ -68,11 +68,11 @@ Slider with the native scroll.
 ```css
 .slider{
     @media (max-width: 599px){
-    --nb: 2;
+        --nb: 2;
     }
     @media (min-width: 600px){
-    --col: 12;
-    --nb: 4;
+        --col: 12;
+        --nb: 4;
     }
 }
 ```
@@ -80,8 +80,8 @@ Slider with the native scroll.
 ### Slider full width and controls
 #### html
 ```html
-<div class="slider myslider">
-    <ul class="slider-content full" aria-label="Last news">
+<div class="slider full">
+    <ul class="slider-content" aria-label="Last news">
         <li class="item"><a href="">1</a></li>
         <li class="item"><a href="">2</a></li>
         <li class="item"><a href="">3</a></li>
