@@ -122,9 +122,3 @@ myslider.enable();
 
 ## Demo
 <a href="https://codepen.io/natjo/pen/eYGWwEo" target="_blank">See codepen demo</a>
-
-Live Demo: [demo]("https://codepen.io/natjo/pen/eYGWwEo){:target="_blank"} //kramdown
-
-Live Demo: [demo]("https://codepen.io/natjo/pen/eYGWwEo){target="_blank"} //markdown
-
-Live Demo: <a href="https://codepen.io/natjo/pen/eYGWwEo" target="_blank">demo</a> //html
