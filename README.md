@@ -4,7 +4,7 @@
 ![version](https://img.shields.io/github/manifest-json/v/Natjo/slider-scroll)
 
 Slider with the native scroll.<br>
-! polyfile if (behavior: 'smooth') not supported 
+! polyfill if (behavior: 'smooth') not supported 
 
 ## Parameters
 | Parameter | Type | Description |
@@ -14,8 +14,8 @@ Slider with the native scroll.<br>
 ## Methods
 | Method | Type | Description |
 | ------ | ------ | ------ |
-| create | function | Activate the slider |
-| destroy | function | Desactivate the slider |
+| enable | function | Activate the slider |
+| disable | function | Desactivate the slider and remove events|
 
 ## Options
 | Class  | Description |
@@ -24,6 +24,12 @@ Slider with the native scroll.<br>
 
 ## Usage
 
+### javascript
+```javascript
+const slider = document.querySelector('.myslider');
+const myslider = new Slider(slider);
+myslider.enable();
+```
 
 ### Slider in container
 #### html
@@ -113,14 +119,12 @@ Slider with the native scroll.<br>
 }
 ```
 
-### javascript
-```javascript
-const slider = document.querySelector('.myslider');
-const myslider = new Slider(slider);
-myslider.enable();
-```
-
-
 
 ## Demo
 <a href="https://codepen.io/natjo/pen/eYGWwEo" target="_blank">See codepen demo</a>
+
+Live Demo: [demo]("https://codepen.io/natjo/pen/eYGWwEo){:target="_blank"} //kramdown
+
+Live Demo: [demo]("https://codepen.io/natjo/pen/eYGWwEo){target="_blank"} //markdown
+
+Live Demo: <a href="https://codepen.io/natjo/pen/eYGWwEo" target="_blank">demo</a> //html
