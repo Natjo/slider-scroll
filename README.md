@@ -20,7 +20,7 @@ Slider with the native scroll.<br>
 ## Options
 | Class  | Description |
 | ------ | ------ |
-| full | To have full width slider |
+| auto | Slides per view auto |
 
 ## Usage
 
@@ -31,31 +31,46 @@ const myslider = new Slider(slider);
 myslider.enable();
 ```
 
-### Slider in container
+### Slides per view auto
 #### html
 ```html
-<div class="slider container">
-    <ul class="slider-content" aria-label="Last news">
-        <li class="item"><a href="">1</a></li>
-        <li class="item"><a href="">2</a></li>
-        <li class="item"><a href="">3</a></li>
-        <li class="item"><a href="">4</a></li>
-        <li class="item"><a href="">5</a></li>
-        <li class="item"><a href="">6</a></li>
-        <li class="item"><a href="">7</a></li>
-    </ul>
-    <button class="slider-btn prev" aria-hidden="true" tabindex="-1">prev</button>
-    <button class="slider-btn next" aria-hidden="true" tabindex="-1">next</button>
+<div class="slider auto">
+    <button class="slider-btn prev">prev</button>
+    <button class="slider-btn next">next</button>
+    <div class="slider-content">
+        <div class="item">1</div>
+        <div class="item"><a href="">2</a></div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item"><button>6</button></div>
+    </div>
+    <div class="slider-pagination"></div>
 </div>
 ```
 #### css
 ```css
 .slider{
-    @media (min-width: 600px){
-        --col: 12;
-        --nb: 4;
+    .item{
+        background: pink;
+        width: 600px;
+        height: 300px;
+
+        &:nth-child(2){
+            width: 200px;
+        }
+        &:nth-child(3){
+            width: 300px;
+        }
     }
 }
+```
+
+#### js
+```javascript
+import Slider from "../modules/slider"
+const slider = new Slider(document.querySelector('.slider'));
+slider.enable();
 ```
 
 ### Slider full width and without controls
