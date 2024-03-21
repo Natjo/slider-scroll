@@ -40,11 +40,11 @@ myslider.enable();
     <button class="slider-btn next">next</button>
     <div class="slider-content">
         <div class="item">1</div>
-        <div class="item"><a href="">2</a></div>
+        <div class="item">2</div>
         <div class="item">3</div>
         <div class="item">4</div>
         <div class="item">5</div>
-        <div class="item"><button>6</button></div>
+        <div class="item">6</div>
     </div>
     <div class="slider-pagination"></div>
 </div>
@@ -87,12 +87,12 @@ myslider.enable();
 #### css
 ```css
 .slider{
-	--nb: 2;
+    --nb: 2;
 
-	.item{
-		background: antiquewhite;
-		aspect-ratio: 1.5;
-	}
+    .item{
+        background: antiquewhite;
+        aspect-ratio: 1.5;
+    }
     @media (min-width: 768px){
         --nb: 3;
     }
