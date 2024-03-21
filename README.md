@@ -26,6 +26,7 @@ Slider with the native scroll.<br>
 
 ### javascript
 ```javascript
+import Slider from "../modules/slider"
 const slider = document.querySelector('.myslider');
 const myslider = new Slider(slider);
 myslider.enable();
@@ -66,76 +67,41 @@ myslider.enable();
 }
 ```
 
-#### js
-```javascript
-import Slider from "../modules/slider"
-const slider = new Slider(document.querySelector('.slider'));
-slider.enable();
-```
-
-### Slider full width and without controls
+### Slides per view fixed
 #### html
 ```html
-<div class="slider full">
-    <ul class="slider-content" aria-label="Last news">
-        <li class="item"><a href="">1</a></li>
-        <li class="item"><a href="">2</a></li>
-        <li class="item"><a href="">3</a></li>
-        <li class="item"><a href="">4</a></li>
-    </ul>
+<div class="slider">
+    <button class="slider-btn prev">prev</button>
+    <button class="slider-btn next">next</button>
+    <div class="slider-content">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <div class="slider-pagination"></div>
 </div>
 ```
 #### css
 ```css
 .slider{
-    @media (max-width: 599px){
-        --nb: 2;
-    }
-    @media (min-width: 600px){
-        --col: 12;
-        --nb: 4;
+	--nb: 2;
+
+	.item{
+		background: antiquewhite;
+		aspect-ratio: 1.5;
+	}
+    @media (min-width: 768px){
+        --nb: 3;
     }
 }
 ```
 
-### Slider full width and controls
-#### html
-```html
-<div class="slider full">
-    <ul class="slider-content" aria-label="Last news">
-        <li class="item"><a href="">1</a></li>
-        <li class="item"><a href="">2</a></li>
-        <li class="item"><a href="">3</a></li>
-        <li class="item"><a href="">4</a></li>
-    </ul>
-    <button class="slider-btn prev" aria-hidden="true" tabindex="-1">prev</button>
-    <button class="slider-btn next" aria-hidden="true" tabindex="-1">next</button>
-</div>
-```
-#### css
-```css
-.slider{
-    grid-template-columns: var(--offset) auto var(--offset);
-
-    .slider-content{
-        grid-column: 1/-1;
-    }
-    .slider-btn{
-        grid-column: 2;
-    }
-
-    @media (max-width: 599px){
-        --nb: 2;
-    }
-    @media (min-width: 600px){
-        --col: 12;
-        --nb: 4;
-    }
-}
-```
 
 
 ## Demo
-<a href="https://codepen.io/natjo/pen/eYGWwEo" target="_blank">See codepen demo</a>
+<!-- <a href="https://codepen.io/natjo/pen/eYGWwEo" target="_blank">See codepen demo</a> -->
 
-<a href="https://codepen.io/natjo/pen/xxewXvK?editors=1111" target="_blank">See last demo</a>
+<a href="https://codepen.io/natjo/pen/xxewXvK?editors=1111" target="_blank">See codepen demo</a>
