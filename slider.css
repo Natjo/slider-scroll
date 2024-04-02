@@ -30,7 +30,10 @@
         &.onswipe {
             cursor: grab;
             user-select: none;
-            pointer-events: none;
+            a,
+			button {
+				pointer-events: none;
+			}
         }
     }
 
