@@ -144,7 +144,9 @@ function Slider(slider) {
     const next = () => {
         index++;
         if (index >= length) index = length;
-        if (index >= bullets.length - 1) index = bullets.length - 1;
+        if (pagination) {
+            if (index >= bullets.length - 1) index = bullets.length - 1;
+        }
         goto();
     };
 
